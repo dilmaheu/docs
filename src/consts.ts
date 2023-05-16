@@ -7,10 +7,3 @@ export const SITE = {
 export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/tree/main`;
 
 export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
-
-// See "Algolia" section of the README for more information.
-export const ALGOLIA = {
-  indexName: "XXXXXXXXXX",
-  appId: "XXXXXXXXXX",
-  apiKey: "XXXXXXXXXX",
-};
