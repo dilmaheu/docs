@@ -1,6 +1,6 @@
 export const SITE = {
-  title: "Documentation",
-  description: "Your website description.",
+  title: "Dilmah EU Documentation",
+  description: "Technical Documentation of Dilmah EU",
   defaultLanguage: "en-us",
 } as const;
 
