@@ -12,16 +12,14 @@ const docsCollection = await getCollection("docs");
 const SIDEBAR: Sidebar = {};
 
 docsCollection.forEach(({ slug, data: { title } }) => {
-  if (slug !== "index") {
-    const [category] = slug.split("/");
+  const [category] = slug.split("/");
 
-    SIDEBAR[category] ??= [];
+  SIDEBAR[category] ??= [];
 
-    SIDEBAR[category].push({
-      text: title,
-      link: slug,
-    });
-  }
+  SIDEBAR[category].push({
+    text: title,
+    link: slug,
+  });
 });
 
 export { SIDEBAR };
