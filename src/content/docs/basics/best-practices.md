@@ -2,25 +2,29 @@
 title: Coding Best Practices
 ---
 
-## 1. Validate the HTML
+## 1. Ensure the code is Open-Source compatible
+
+Make sure the code we write can be made public later. Don't leak any sensitive information such as API keys, access tokens, or any other credentials. And also for other non-senstive information, use environmental variables instead of hardcoding them. It helps to keep the code customizable and makes it easier to make it public later.
+
+## 2. Validate the HTML
 
 Make sure the generated HTML is W3C validated using the [W3C Markup Validator](https://validator.w3.org/). It helps to prevent unexpected errors and helps improve SEO.
 
-## 2. Make sure the website is accessible
+## 3. Make sure the website is accessible
 
 Always make sure the website is WCAG-compliant. Whenever you add a new feature, test it both manually such as using a screen reader and automatically using tools such as [WAVE](https://wave.webaim.org/).
 
 The tools are not perfect and they can't detect all the issues. Always remember to add proper labels to any custom interactive elements and make them navigable using a keyboard.
 
-## 3. Dynamic Content
+## 4. Dynamic Content
 
 All the content of our website must update whenever the content is updated in the CMS. Make sure that there are no hardcoded values in the code and the data updates whether they are handled on the server side or client side.
 
-## 4. I18N
+## 5. I18N
 
 Make sure that the website is fully localized. The website must be fully functional in all the supported languages and work properly even if the content isn't available in all the languages.
 
-## 5. Casing
+## 6. Casing
 
 Using the appropriate _case_ is an important part of naming things. We adhere to the following guidelines to select the correct case:
 
@@ -32,7 +36,7 @@ Using the appropriate _case_ is an important part of naming things. We adhere to
 
 **Note:** We have used unconventional cases for most of our CMS fields, such as `Intro_blob`, `Intro_Text`. Now, it'll take a lot of effort to go through all of the fields and change their names. So, we'll continue to use them as they are. But, for any new fields, we'll use the correct case.
 
-## 6. Formatting
+## 7. Formatting
 
 Before pushing, make sure the code is formatted. Both manual and automatic efforts may be required to format the code. You must leave space between elements, lines of code, and style rules, properly separate them (for JS, with code blocks and semi-colons), and may have to edit the auto-formatted code if it does not look good enough.
 
@@ -48,7 +52,7 @@ If you want to preview the changes before applying them, then run:
 pnpm format:preview
 ```
 
-## 7. Use descriptive names
+## 8. Use descriptive names
 
 All of the things we have to name, such as _variables_, _filenames_, _CMS fields_, and so on, must have descriptive names that explain what they mean and do.
 
@@ -70,7 +74,7 @@ function calcTime(timeArray) {
 }
 ```
 
-## 8. Write scoped styles
+## 9. Write scoped styles
 
 If a set of styles applies only to one page or component, they must be scoped to that page or component. It guarantees that the styles will be applied.
 
@@ -86,17 +90,17 @@ import styles from "../path/to/styles.scss";
 </style>
 ```
 
-## 9. Use _Semantic Tags_
+## 10. Use _Semantic Tags_
 
 Instead of using plain _divs_ for everything, always try to use semantic tags, such as: `<section>` for different sections of a webpage, `<article>` for content, `<nav>` for navigations, `<header>` and `<footer>` for the header and footer, and so on. It improves accessibility and makes the code more descriptive.
 
-## 10. Recurring Elements & Images
+## 11. Recurring Elements & Images
 
 We have different content types for _Collections_ (Blog, How-to, Recipes, etc.) and _Singles_ (Blog Details, How-to Details, Recipe Details, etc.). But it's possible that a piece of data or an image will be used across multiple pages of the same type or different types. Create a new field in the `Recurring_elements` content type for it, or `Recurring Images` for images, and add them via the _Content Manager_.
 
 If there are too many recurring elements that have been used only in one type of content, then it's better to create a new single content type for them. For example, we have the `Aria label recurring element` content type for the aria labels and related texts and we have the `Checkout Recurring Elements` content type for the checkout pages.
 
-## 11. Order attributes by importance and specificity
+## 12. Order attributes by importance and specificity
 
 Attributes of an element should be ordered by their importance and specificity. For example, `id` should always come before `class` or `class:list`. Or, if there are uncommon attributes, that are specific to a certain element, they should come first, such as `role`, `aria-label`, `tabindex`, etc.
 
@@ -130,7 +134,7 @@ Attributes of an element should be ordered by their importance and specificity. 
 </div>
 ```
 
-## 12. Order classes by importance and specificity
+## 13. Order classes by importance and specificity
 
 The same rule applies to the classes of an element. They should be ordered by their importance and specificity. The primary class names should come before the secondary class names (e.g. Tailwind classes). And the primary class names should be listed in the order of their specificity.
 
@@ -150,7 +154,7 @@ The same rule applies to the classes of an element. They should be ordered by th
 </div>
 ```
 
-## 13. Use `class:list`
+## 14. Use `class:list`
 
 Use the `class:list` template directive instead of the `class` attribute if an element has a long list of classes, if it contains interpolations or is concatenated, or if there are any conditional classes. It improves the organization of the classes and increases readability.
 
@@ -177,13 +181,13 @@ Use the `class:list` template directive instead of the `class` attribute if an e
 </div>
 ```
 
-## 14. Use Tailwind classes as much as possible
+## 15. Use Tailwind classes as much as possible
 
 Always try to use Tailwind classes for simple styles both inside the `class` attribute and custom styles. It helps to keep the code closer to the HTML and the stylesheets more organized. As a result, it's much easier to tweak any style in this way.
 
 Using arbitrary classes is fine but if any classes are complex to read and understand, then it's better to use custom styles.
 
-## 15. Order listlike things by length from shortest to longest
+## 16. Order listlike things by length from shortest to longest
 
 Order listlike things such as imports by length from shortest to longest. It makes them look cleaner and easier to read.
 
@@ -205,7 +209,7 @@ import ClipPathSVG from "@components/ClipPathSVG.astro";
 ---
 ```
 
-## 16. Separate the imports into groups
+## 17. Separate the imports into groups
 
 When there are many imports (e.g. more than 5), separate the similar imports into groups with a line break between each group. It makes the imports look cleaner and easier to manage.
 
@@ -235,7 +239,7 @@ import LangSelectorsDropdown from "@components/LangSelectorsDropdown.astro";
 ---
 ```
 
-## 17. Always use import aliases
+## 18. Always use import aliases
 
 Always use import aliases to import components, styles, utilities, or any other files. It helps to keep the imports organized and makes them easier to manage.
 
@@ -249,23 +253,23 @@ import ClippedPicture from "@components/ClippedPicture.astro";
 ---
 ```
 
-## 18. Extract raster images from SVGs
+## 19. Extract raster images from SVGs
 
 For the curved designs, Figma embeds raster images (PNG, JPG, WEBP, and so on) within SVGs. They must be pulled out from the SVGs so that it's possible to optimize them and for accessibility reasons. If you are having difficulty, seek assistance from the seniors.
 
-## 19. Use _layouts_
+## 20. Use _layouts_
 
 If a _layout_ for a specific type of page is available, it must be used. Add slots for any use cases that aren't covered by the layout.
 
-## 20. Break down large components
+## 21. Break down large components
 
 If a page/component grows too long (hundreds of lines of code), or if some parts of it are too specific and will improve the readability of the component if removed, break it down into multiple components. It helps to keep the codebase organized.
 
-## 21. Generate elements on the server-side
+## 22. Generate elements on the server-side
 
 Remember that if the data required to generate/create an element or elements is available on the server in any form, they can always be generated on the server. If you are having difficulty, seek assistance from the seniors.
 
-## 22. Don't conditionally hide elements on the client-side
+## 23. Don't conditionally hide elements on the client-side
 
 If an element or elements are shown conditionally and data about both the condition and the elements is available on the server side, don't hide the elements on the client side, instead don't generate them.
 
@@ -293,7 +297,7 @@ If an element or elements are shown conditionally and data about both the condit
 }
 ```
 
-## 23. Always use JavaScript comments instead of HTML comments
+## 24. Always use JavaScript comments instead of HTML comments
 
 HTML comments are exposed to the client. Comments are used to help us, our development team understand the code. We don't want other developers to see them. Use JavaScript comments if you need to use comments within Astro components.
 
@@ -317,7 +321,7 @@ HTML comments are exposed to the client. Comments are used to help us, our devel
 }
 ```
 
-## 24. Maintain a balance between performance and nice-looking when writing code
+## 25. Maintain a balance between performance and nice-looking when writing code
 
 When building logic, give more importance to performance than making the code look nice but don't make it gibberish just to make it run just a few milliseconds faster unless it's absolutely necessary.
 
@@ -333,7 +337,7 @@ for (let i = 0; i < fruits.length; i++) {
 fruits.forEach((fruit) => console.log(fruit));
 ```
 
-## 25. Use block-scoped variables
+## 26. Use block-scoped variables
 
 All variables should be declared using `let` and `const` unless using `var` makes sense. It keeps the variables scoped to the block they are defined within and helps to avoid variable naming and memory issues.
 
@@ -347,7 +351,7 @@ var m = timeArray[2];
 const [day, hour, minute] = timeArray;
 ```
 
-## 26. Avoid disemvoweling
+## 27. Avoid disemvoweling
 
 Avoid disemvoweling variable names. It makes them harder to read and understand. If you want to shorten the names, use common short forms instead.
 
@@ -361,7 +365,7 @@ locales.map((locale, i) => {});
 ---
 ```
 
-## 27. Always perform strict equality check
+## 28. Always perform strict equality check
 
 When comparing the equality of two values, always use the _strict equality check_ (`===`) rather than the _loose equality check_ (`==`). It helps to prevent unexpected errors.
 
@@ -373,7 +377,7 @@ When comparing the equality of two values, always use the _strict equality check
 {page.type === "homepage" && <Posts page={page} />}
 ```
 
-## 28. Convert values to boolean when checking for truthiness
+## 29. Convert values to boolean when checking for truthiness
 
 When checking for truthiness, convert the value to a boolean if the expression signature doesn't make sense.
 
@@ -385,11 +389,11 @@ const hasToRemoveItem = !!target.closest(".remove-item-btn");
 const productExistsInCart = !!cart[productId];
 ```
 
-## 29. Remove unused variables
+## 30. Remove unused variables
 
 Remove any unused variables that have never been used or have become obsolete after a recent rewrite/refactoring to keep the code clean.
 
-## 30. Use \_ to indicate unused parameters
+## 31. Use \_ to indicate unused parameters
 
 If a callback function accepts multiple parameters but you don't need to one or multiple of the first parameters, use `_` to indicate that the parameter is unused.
 
@@ -407,7 +411,7 @@ const blogPages = getPages(homeBlog, (_, { locale }) => ({
 }));
 ```
 
-## 31. Prefix mobile versions with `sm`/`Sm`
+## 32. Prefix mobile versions with `sm`/`Sm`
 
 If there are two different versions of something for mobile and desktop, always prefix the name/label for the mobile version with `sm` or `Sm` depending on what language you are using. Even if there's no need to name/label the desktop version, the mobile version must be prefixed with `sm` or `Sm`.
 
