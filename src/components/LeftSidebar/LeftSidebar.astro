@@ -12,7 +12,9 @@ const docsCollection = await getCollection("docs");
 const SIDEBAR: Sidebar = {};
 
 docsCollection.forEach(({ slug, data: { title } }) => {
-  const [category] = slug.split("/");
+  let [category] = slug.split("/");
+
+  category = category.replaceAll("-", " ").replaceAll("and", "&");
 
   SIDEBAR[category] ??= [];
 
