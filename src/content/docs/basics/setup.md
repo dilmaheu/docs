@@ -4,7 +4,7 @@ title: Setup
 
 ## Node.js
 
-Astro recommends using Node `16.12.0` or higher. We recommend using Node 18 for running this project. Other versions may work, but we do not test against them.
+We recommend using Node 18 or higher for running our projects. Astro recommends using Node `16.12.0` or higher. Other versions may work, but we do not test against them.
 
 ## Package Manager
 
@@ -12,16 +12,6 @@ We use `pnpm` to manage our dependencies. You can install `pnpm` using the follo
 
 ```bash
 npm install -g pnpm
-```
-
-## Git
-
-We commit the `astro-imagetools` cache directory to Git. Since they are large binary files, we use [Git LFS](https://git-lfs.github.com/) to manage them. So, you need to install Git LFS first from its website before cloning the repository.
-
-If you have already cloned the repository, run the following command to pull the _Git LFS Objects_ from the remote repository:
-
-```bash
-git-lfs pull
 ```
 
 ## Editor
@@ -34,3 +24,4 @@ We don't recommend any specific editor, but Astro recommends using [VS Code](htt
 - [**Prettier**](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): Code formatter
 - [**Tailwind CSS IntelliSense**](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss): Tailwind CSS class name completion
 - [**GraphQL: Language Feature Support**](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql): GraphQL syntax highlighting
+- [**GitHub Pull Requests and Issues**](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github): PR & Issue management
