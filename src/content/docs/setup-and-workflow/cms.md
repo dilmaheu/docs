@@ -29,6 +29,8 @@ import_prod
 
 This command will perform all the steps required to import the content & configurations from the production environment. Once the content is imported, you can start working on the story.
 
+> **Note:** It's not necessary to import the content from the production environment every time you start working on a new story. But if you are going to make changes to the content types, it's better to import the content from the production environment first.
+
 Once the changes are ready to be on production, export the changes from the **Development** environment and import them to the **Production** environment.
 
 Then run the following command to export the changes from the development environment.
