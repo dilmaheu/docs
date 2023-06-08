@@ -4,6 +4,13 @@ Title: Dilmahtea.me Scripts Repository
 
 This document describes the workflow for the [Dilmahtea.me Scripts](https://github.com/dilmaheu/scripts.dilmahtea.me) project which is hosted at [https://scripts.dilmahtea.me](https://scripts.dilmahtea.me).
 
+## Project Structure
+
+- **.github/workflows/\*.yml**: GitHub Actions workflows
+- **.gitignore**: Specifies intentionally untracked files to ignore
+- **server.js**: The _Express_ server file
+- **utils/\*.js**: Utilities
+
 ## Setup
 
 Clone the repository to your local machine first.

@@ -4,6 +4,17 @@ title: Dilmahtea.me Workers Repository
 
 This document describes the workflow for the [Dilmahtea.me Workers](https://github.com/dilmaheu/dilmahtea.me) project.
 
+## Project Structure
+
+- **.github/workflows/\*.yml**: GitHub Actions workflows
+- **.gitignore**: Specifies intentionally untracked files to ignore
+- **pnpm-workspace.yaml**: PNPM Workspace configuration file
+- **src/utils/\*.js**: Utilities available to all the workers
+- **src/workers/\***: Cloudflare Workers projects
+- **src/workers/\*/wrangler.toml**: Wrangler configuration file
+- **src/workers/\*/src/index.js**: Worker main file
+- **src/workers/\*/src/utils/\*.js**: Worker-specific utilities
+
 ## Setup
 
 Clone the repository to your local machine first.
