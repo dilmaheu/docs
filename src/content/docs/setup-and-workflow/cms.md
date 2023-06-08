@@ -6,6 +6,15 @@ This document describes the workflow for the [Strapi CMS](https://cms.dilmahtea.
 
 > **Note:** This workflow does not apply to content editing.
 
+## Secrets
+
+### GitHub Actions Secrets
+
+- **SSH_HOST**
+- **SSH_PORT**
+- **SSH_USERNAME**
+- **SSH_KEY**
+
 ## Workflow
 
 We have two environments for the Strapi CMS: **Production** and **Development**. They are hosted at the following URLs:

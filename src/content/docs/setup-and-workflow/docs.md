@@ -10,6 +10,12 @@ All of the code we write must be descriptive enough that a programmer/developer 
 
 However, comments and descriptive code aren't enough to explain the functionalities of a larger concept. In such cases, we should document the concept thoroughly.
 
+## Secrets
+
+### Environment Variables
+
+- **GITHUB_TOKEN**
+
 ## Setup
 
 Clone the repository to your local machine first.

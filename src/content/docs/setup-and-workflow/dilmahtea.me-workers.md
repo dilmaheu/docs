@@ -15,6 +15,16 @@ This document describes the workflow for the [Dilmahtea.me Workers](https://gith
 - **src/workers/\*/src/index.js**: Worker main file
 - **src/workers/\*/src/utils/\*.js**: Worker-specific utilities
 
+## Secrets
+
+### GitHub Actions Secrets
+
+- **CF_API_TOKEN**
+
+### Worker-specific Secrets
+
+The secrets used by a worker is listed in the `wrangler.toml` configuration file of the worker.
+
 ## Setup
 
 Clone the repository to your local machine first.

@@ -11,6 +11,22 @@ This document describes the workflow for the [Dilmahtea.me Scripts](https://gith
 - **server.js**: The _Express_ server file
 - **utils/\*.js**: Utilities
 
+## Secrets
+
+### Environment Variables
+
+- **GITHUB_PAT**
+- **BUILD_WEBHOOK_SECRET**
+- **LOGPUSH_SECRET**
+- **LOGS_DIR_PASSWORD**
+
+### GitHub Actions Secrets
+
+- **SSH_HOST**
+- **SSH_PORT**
+- **SSH_USERNAME**
+- **SSH_KEY**
+
 ## Setup
 
 Clone the repository to your local machine first.

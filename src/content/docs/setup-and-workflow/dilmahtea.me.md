@@ -35,6 +35,32 @@ This document describes the workflow for the [Dilmahtea.me](https://github.com/d
 - **src/postbuild-integration**: Custom Astro integration code for running post-build tasks
 - **src/postbuild-integration/tasks/\*.js**: Post-build tasks
 
+## Secrets
+
+### Environment Variables
+
+- **DB_URL**
+- **ASSETS_URL**
+- **ACCESS_TOKEN**
+
+> **Note:** The values of these variables differ between production and development environments. Update the values to switch between environments.
+
+### GitHub Actions Secrets
+
+- **DEV_DB_URL**
+- **DEV_ASSETS_URL**
+- **DEV_ACCESS_TOKEN**
+- **PROD_DB_URL**
+- **PROD_ASSETS_URL**
+- **PROD_ACCESS_TOKEN**
+- **BUILD_WEBHOOK_SECRET**
+- **CLOUDFLARE_API_TOKEN**
+- **CLOUDFLARE_ACCOUNT_ID**
+- **MATRIX_USER**
+- **MATRIX_SERVER**
+- **MATRIX_ROOM_ID**
+- **MATRIX_PASSWORD**
+
 ## Setup
 
 Clone the repository to your local machine first.
