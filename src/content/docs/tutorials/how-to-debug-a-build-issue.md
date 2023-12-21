@@ -53,7 +53,15 @@ This error means that the build failed because the content couldn't be fetched f
 
 The `message` property of the object contains the error message. Try to understand what the message means. If you can't understand the message, search online or use [ChatGPT](https://chat.openai.com/).
 
-The `path` property of the object contains the path to the field that caused the error. It provides a complete hierarchy of the field that you can use to find the problematic field in the CMS.
+The `path` property of the object contains the path to the field that caused the error. It provides a complete hierarchy of the field that you can use to find the problematic field in the CMS. In this case, the path starts with `catalog`, so first, go to the `catalog` content type in the CMS.
+
+If you go to the `catalog` content type, you'll see that there's a field named `Products` which is a repeatable component. According to the `path`, we have to look into the entry at index `82` of the `Products` field. Indexing starts from `0`, so the entry at index `82` is the 83rd entry. So, go to the 83rd entry of the `Products` field. After going to the 83rd entry of the `Products` field, go to the **0th**, which means the first, related entry by the `products` field.
+
+You see that the next part of the path `localizations`. It means that the entry itself doesn't have any issue but one of its localizations has an issue. So, go to the **1st**, which means the second or the `Dutch`, localization of the entry.
+
+Then, find out if the `Meta.URL_slug` field of the entry related by the `category_tea_range` field has any issue or empty. In this particular case that happened in the past, the related `category_tea_range` was still in draft and incomplete. That's why it was missing the `Meta.URL_slug` field. So, the solution was to complete & publish the `category_tea_range` entry.
+
+> **Note**: The index of the localization entries are based on the alphabetical order of the locale codes. Currently there are two languages enabled besides **English** which are **German** and **Dutch**, and their locale codes are `de` and `nl` respectively. So, the index `0` is for **German** and `1` is for **Dutch**.
 
 If you don't see any object like this after the mentioned error, then it's probably an issue with the code or a temporary issue. Try retrying the workflow to see if it fixes the issue. Otherwise, it's best to ask the devs.
 
