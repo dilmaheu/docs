@@ -24,10 +24,10 @@ We have two environments for the Strapi CMS: **Production** and **Development**.
 
 Other than editing content, all kinds of content-type structure updates, settings/configuration changes, file changes should be done on the **Development** environment first.
 
-When you're working on a new story, import the content from the **Production** environment to the **Development** environment first. Log in to the **Hetzner VPS** and run the following command to navigate to the development CMS directory.
+When you're working on a new story, import the content from the **Production** environment to the **Development** environment first. Log in to the **Hetzner VPS** using the secrets above and run the following command to navigate to the development CMS directory.
 
 ```bash
-cd /home/strapi/strapi/dilmahtea.me/strapi/dev
+cd /home/strapi/strapi/dilmahtea.me/dev
 ```
 
 Then run the following command to import the content from the **Production** environment.
