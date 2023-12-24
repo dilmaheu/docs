@@ -30,6 +30,8 @@ When you're working on a new story, import the content from the **Production** e
 cd /home/strapi/strapi/dilmahtea.me/dev
 ```
 
+> **Note:** If you log in to the server using the credentials used by GitHub Actions, you'll be logged in as the `strapi` user and you don't need to perform any additional steps. But if you log in to your own user account, you have to switch to the `strapi` user first by running `sudo su - strapi`.
+
 Then run the following command to import the content from the **Production** environment.
 
 ```bash
