@@ -71,13 +71,15 @@ If you see this error, or another error that contains the word `Vips` or an imag
 
 ### 5.3. `Cannot read properties of undefined (reading 'attributes')`
 
-If you see this error or a similar error that starts with `Cannot read properties of undefined` or `Cannot read properties of null`, then try to find out while trying to build which page the error was thrown from. You should see the URL of the page just above the error message. It's outputted in the following format:
+If you see this error or a similar error that starts with `Cannot read properties of undefined` or `Cannot read properties of null`, then try to find out while trying to build which page the error was thrown from. You should see the URL of the previous page just above the error message. It's outputted in the following format:
 
 ```bash
 ├─ /nl/account/congrats/index.html (+60ms)
 ```
 
-You should be able to find which content entry is causing the issue from the URL. The error is unclear about exactly which field is causing the issue. So, just check the content entry to see if there's something wrong with it. If everything seems fine, then most probably it's an issue with the code.
+Though there's no direct way to know what the current page is, from the URL previous, you should get an idea what the next page could be or what is its type. If it doesn't help then try to analyze the error to determine what type of page it could be.
+
+The error is unclear about exactly which field is causing the issue. So, just check the content entry/entries to see if there's something wrong with it. If everything seems fine, then most probably it's an issue with the code.
 
 ### 5.4. Any other error
 
