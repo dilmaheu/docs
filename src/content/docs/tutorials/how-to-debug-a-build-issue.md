@@ -69,7 +69,7 @@ If you don't see any object like this after the mentioned error, then it's proba
 
 If you see this error, or another error that contains the word `Vips` or an image format like `JPEG`, `PNG`, `WEBP`, somewhere in the message, then it's probably a temporary issue with the images. Most of the time, retrying the workflow fixes the issue.
 
-### 5.4. `Failed to load ***/uploads/<image-file-name>; Invalid image format`
+### 5.3. `Failed to load ***/uploads/<image-file-name>; Invalid image format`
 
 This error usually happens after importing changes from the production CMS to the development CMS. It means that the image file is corrupted. From the URL, find out which image is causing the issue.
 
@@ -77,7 +77,7 @@ Then, go to the CMS and download the image. If the format of the image is `webp`
 
 Strapi doesn't support automatically updating the references to replaced images. So, you have to manually update the references to the image in the content entries. If new build issues arise after replacing the image, then it's probably because of this.
 
-### 5.3. `Cannot read properties of undefined (reading 'attributes')`
+### 5.4. `Cannot read properties of undefined (reading 'attributes')`
 
 If you see this error or a similar error that starts with `Cannot read properties of undefined` or `Cannot read properties of null`, then try to find out while trying to build which page the error was thrown from. You should see the URL of the previous page just above the error message. It's outputted in the following format:
 
