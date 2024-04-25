@@ -93,6 +93,6 @@ Though there's no direct way to know what the current page is, from the URL prev
 
 The error is unclear about exactly which field is causing the issue. So, just check the content entry/entries to see if there's something wrong with it. If everything seems fine, then most probably it's an issue with the code.
 
-### 5.4. Any other error
+### 5.6. Any other error
 
 If you see any other error, then perform the same steps as mentioned in the [previous section](#53-cannot-read-properties-of-undefined-reading-attributes).
