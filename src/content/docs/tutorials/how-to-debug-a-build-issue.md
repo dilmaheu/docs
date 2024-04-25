@@ -65,9 +65,9 @@ Then, find out if the `Meta.URL_slug` field of the entry related by the `categor
 
 If you don't see any object like this after the mentioned error, then it's probably an issue with the code or a temporary issue. Try retrying the workflow to see if it fixes the issue. Otherwise, it's best to ask the devs.
 
-### 5.2. `Perfect Ceylon Tea (en) is missing 'size'`
+### 5.2. `Perfect Ceylon Tea is missing 'size'`
 
-Here in this error message, **Perfect Ceylon Tea** is the name of the product and **en** is the locale code. The error message means that the **size** field of the product is missing. This error is thrown also if the **variant** field of the product is missing. To fix this issue, go to the product entry in the CMS in the respective locale, select the appropriate size or variant for the product and save the changes.
+Here in this error message, **Perfect Ceylon Tea** is the name of the product. The error message means that the **size** field of the product is missing. This error is thrown also if the **variant** field of the product is missing. To fix this issue, go to the product entry in the CMS, select the appropriate size or variant for the product and save the changes.
 
 ### 5.3. `VipsJpeg: Premature end of input file`
 
