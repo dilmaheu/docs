@@ -81,7 +81,15 @@ Then, go to the CMS and download the image. If the format of the image is `webp`
 
 Strapi doesn't support automatically updating the references to replaced images. So, you have to manually update the references to the image in the content entries. If new build issues arise after replacing the image, then it's probably because of this.
 
-### 5.5. `Cannot read properties of undefined (reading 'attributes')`
+### 5.5 `Input file has corrupt header: webp: unable to parse image`
+
+If you notice an error like this, it's probably because an image stored in the cache got corrupted somehow. To fix this issue, you can try clearing the cache. To do this, go to <https://github.com/dilmaheu/dilmahtea.me/actions/caches> and search for the cache `astro-imagetools-cache-${branch-name}`, e.g. `astro-imagetools-cache-main`. Then, click on the trash bin button on the right. After clearing the cache, retry the workflow to see if it fixes the issue.
+
+> **Note:** Since we have thousands of images on our website, rebuilding the cache from the scratch takes time and the build might fail multiple times before the cache is rebuilt. So, keep patience and retry the workflow if it fails.
+>
+> If any other image related error happens, giving clearing the cache a try before contacting the devs would be the best idea.
+
+### 5.6. `Cannot read properties of undefined (reading 'attributes')`
 
 If you see this error or a similar error that starts with `Cannot read properties of undefined` or `Cannot read properties of null`, then try to find out while trying to build which page the error was thrown from. You should see the URL of the previous page just above the error message. It's outputted in the following format:
 
@@ -93,6 +101,6 @@ Though there's no direct way to know what the current page is, from the URL prev
 
 The error is unclear about exactly which field is causing the issue. So, just check the content entry/entries to see if there's something wrong with it. If everything seems fine, then most probably it's an issue with the code.
 
-### 5.6. Any other error
+### 5.7. Any other error
 
-If you see any other error, then perform the same steps as mentioned in the [previous section](#53-cannot-read-properties-of-undefined-reading-attributes).
+If you see any other error, then give the same steps as mentioned in the [previous section](#53-cannot-read-properties-of-undefined-reading-attributes) a try.
